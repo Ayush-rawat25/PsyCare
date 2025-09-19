@@ -105,7 +105,7 @@ const Dashboard = () => {
   const [nextApptDetails, setNextApptDetails] = useState(null);
   useEffect(() => {
     const token = localStorage.getItem("token");
-    fetch("http://localhost:8080/api/appointments?limit=1", {
+    fetch("https://psycare-backend.onrender.com/api/appointments?limit=1", {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => res.json())
@@ -323,7 +323,7 @@ const Dashboard = () => {
                             try {
                               const token = localStorage.getItem("token");
                               await axios.post(
-                                "http://localhost:8080/api/forum",
+                                "https://psycare-backend.onrender.com/api/forum",
                                 {
                                   title: "Wellness Update",
                                   content: `My wellness status today: ${selectedMood}`

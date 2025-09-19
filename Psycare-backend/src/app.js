@@ -26,7 +26,7 @@ app.use(express.json());
 // const userRoutes = require('./routes/userRoutes');
 // app.use('/api/users', userRoutes);
 app.use(cors({
-  origin: "http://localhost:5000",  // frontend origin
+  origin: "https://psycare-2btm.onrender.com/",  // frontend origin
   methods: ["GET", "POST","PATCH","DELETE"],
   credentials: true
 }));
