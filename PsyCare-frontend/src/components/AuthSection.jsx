@@ -113,6 +113,7 @@ const AuthSection = () => {
           data.user.avatar = randomAvatar;
         }
         localStorage.setItem("token", data.token);
+        localStorage.setItem("user", JSON.stringify(data.user));
         setUser(data.user); // Update context for live navbar update
         setShowDashboardLoading(true);
         setTimeout(() => {
